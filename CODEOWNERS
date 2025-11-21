@@ -1,0 +1,4 @@
+# CODEOWNERS – example
+*       @sahilgundu
+/docs/  @sahilgundu
+/contracts/ @sahilgundu

@@ -1,0 +1,79 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "transactions",
+  "type": "object",
+  "description": "Synthetic transaction / compliance event for Streaming ETL pipeline.",
+  "properties": {
+    "transaction_id": {
+      "type": "string",
+      "description": "Unique transaction identifier."
+    },
+    "event_time": {
+      "type": "string",
+      "format": "date-time",
+      "description": "Event timestamp in UTC."
+    },
+    "account_id": {
+      "type": "string"
+    },
+    "customer_id": {
+      "type": "string"
+    },
+    "amount": {
+      "type": "number",
+      "minimum": 0
+    },
+    "currency": {
+      "type": "string",
+      "minLength": 3,
+      "maxLength": 3
+    },
+    "channel": {
+      "type": "string",
+      "enum": [
+        "ONLINE",
+        "POS",
+        "ATM",
+        "BRANCH",
+        "MOBILE",
+        "OTHER"
+      ]
+    },
+    "country": {
+      "type": "string",
+      "description": "ISO country code."
+    },
+    "mcc_code": {
+      "type": "string",
+      "description": "Merchant category code (if applicable)."
+    },
+    "risk_flags": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "description": "Optional rule-based flags set by upstream systems."
+    },
+    "ingestion_id": {
+      "type": "string",
+      "description": "Unique ID for ingestion pipeline run."
+    },
+    "source_system": {
+      "type": "string"
+    },
+    "event_type": {
+      "type": "string",
+      "description": "Type of event, e.g., PAYMENT, TRANSFER, LOGIN."
+    }
+  },
+  "required": [
+    "transaction_id",
+    "event_time",
+    "account_id",
+    "amount",
+    "currency",
+    "channel",
+    "country"
+  ],
+  "additionalProperties": true
+}

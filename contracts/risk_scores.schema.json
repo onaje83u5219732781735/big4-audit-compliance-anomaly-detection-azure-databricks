@@ -1,0 +1,110 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "risk_scores",
+  "type": "object",
+  "description": "Risk scoring output record produced by ML pipeline.",
+  "properties": {
+    "score_id": {
+      "type": "string",
+      "description": "Unique identifier for this scoring event."
+    },
+    "transaction_id": {
+      "type": "string"
+    },
+    "event_time": {
+      "type": "string",
+      "format": "date-time",
+      "description": "Original event timestamp."
+    },
+    "scored_time": {
+      "type": "string",
+      "format": "date-time",
+      "description": "Time of scoring in UTC."
+    },
+    "risk_score": {
+      "type": "number",
+      "minimum": 0,
+      "maximum": 1
+    },
+    "risk_band": {
+      "type": "string",
+      "enum": [
+        "LOW",
+        "MEDIUM",
+        "HIGH"
+      ]
+    },
+    "is_anomaly": {
+      "type": "boolean"
+    },
+    "model_name": {
+      "type": "string"
+    },
+    "model_version": {
+      "type": "string"
+    },
+    "model_run_id": {
+      "type": "string"
+    },
+    "pipeline_run_id": {
+      "type": "string"
+    },
+    "features_version": {
+      "type": "string"
+    },
+    "explanations": {
+      "type": "array",
+      "description": "Top feature contributions for explainability.",
+      "items": {
+        "type": "object",
+        "properties": {
+          "feature": {
+            "type": "string"
+          },
+          "value": {},
+          "contribution": {
+            "type": "number"
+          }
+        },
+        "required": [
+          "feature",
+          "contribution"
+        ],
+        "additionalProperties": true
+      }
+    },
+    "dq_status": {
+      "type": "string",
+      "enum": [
+        "PASSED",
+        "FAILED",
+        "UNKNOWN"
+      ],
+      "description": "Overall DQ status at time of scoring."
+    },
+    "dq_run_id": {
+      "type": "string",
+      "description": "Identifier for associated DQ run."
+    },
+    "latency_ms": {
+      "type": "number",
+      "minimum": 0
+    },
+    "tenant_id": {
+      "type": "string",
+      "description": "Tenant / business unit identifier."
+    }
+  },
+  "required": [
+    "score_id",
+    "transaction_id",
+    "event_time",
+    "scored_time",
+    "risk_score",
+    "risk_band",
+    "is_anomaly",
+    "model_name",
+    "model_version"
+  ],
+  "additionalProperties": true
+}
